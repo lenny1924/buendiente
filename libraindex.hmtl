@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Libra x Libra - Buen Diente</title>
+<link rel="stylesheet" href="stylesan.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Libre+Baskerville&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="topline"></div>
+    <div class="logo-container">
+        <img src="img/logo rojo.svg" width="220">
+    </div>
+    <div class="divider"></div>
+</header>
+
+<main class="nota">
+
+    <!-- ENCABEZADO -->
+    <section class="encabezado">
+        <h1>Libra x Libra: Capas de calle, sabor de identidad</h1>
+
+        <p class="bajada">
+        El sonido no es el de una galleta crujiendo, sino el del fuego lamiendo el metal y el golpe rítmico del cuchillo sobre la tabla de picar. Un aroma a limón recién exprimido se mezcla en el aire con el calor de las brasas. Aquí, el ritual no empieza con un envoltorio, sino al recibir el plato: un despliegue de frescura y color que brilla bajo la luz del local.
+        </p>
+
+        <p class="autor">Buen Diente</p>
+    </section>
+
+    <!-- GRID -->
+    <section class="grid">
+
+        <!-- IZQUIERDA -->
+        <div class="col texto">
+            <p>
+            En Chiclayo, sentarse en Libra x Libra es aceptar que el hambre se combate con generosidad y que el sabor del barrio tiene su propio templo.
+            </p>
+
+            <h2>Capas de historia: Resiliencia y transformación</h2>
+
+            <p>
+            La historia de Libra x Libra es el relato de una reinvención. Todo comenzó en el convulso 2020, cuando el mundo se detuvo por la pandemia. En medio de la incertidumbre, la marca encendió sus fogones bajo un formato de delivery de hamburguesas, apostando por la contundencia en un momento donde la cercanía se medía a través de un pedido a domicilio.
+            </p>
+
+            <p>
+            Sin embargo, lo que inició como una respuesta a la crisis, rápidamente mutó gracias a la visión de sus fundadores y al pulso de la calle. Esa primera capa de éxito basada en la comida urbana permitió que la marca evolucionara y diera el salto al formato físico, expandiéndose hacia el rubro marino sin perder su esencia original.
+            </p>
+        </div>
+
+        <!-- CENTRO -->
+        <div class="col visual">
+            <img src="libra1.jpeg" class="img grande">
+
+            <div class="cita">
+            “Lo que empezó como delivery hoy es identidad gastronómica en expansión”.
+            </div>
+        </div>
+
+        <!-- DERECHA -->
+        <div class="col texto">
+
+            <p>
+            Hoy, lo que empezó en una cocina cerrada se ha consolidado en locales estratégicos como Santa Victoria y la zona de Las Musas, logrando lo que pocos consiguen en tan poco tiempo: pasar de una bolsa de delivery a ser una parada obligatoria en la ruta gastronómica de Chiclayo.
+            </p>
+
+            <h2>Sabor de identidad: La mística del plato generoso</h2>
+
+            <p>
+            En Libra x Libra, la identidad se define por la versatilidad de su barra. El ceviche clásico se presenta con la rectitud de la tradición, mientras que el ceviche carretillero aporta ese carácter audaz y popular que define a la ciudad.
+            </p>
+
+            <img src="libra2.jpeg" class="img pequena">
+
+            <p>
+            Sin embargo, la marca ha sabido conquistar el paladar local con propuestas más audaces, como el ceviche cremoso en rocoto, una explosión de textura y picante equilibrado que se ha vuelto un sello de la casa.
+            </p>
+
+            <p>
+            Pero el verdadero emblema es el ceviche cremoso acompañado de torta de choclo: un encuentro de texturas entre lo fresco y lo tibio que se siente puramente chiclayano.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- PIE -->
+    <section class="pie">
+        <img src="libra3.jpeg" class="img final">
+
+        <p>
+        Esta propuesta no busca imitar a nadie; es la representación de una gastronomía que entiende al chiclayano de hoy: intenso, exigente y que valora la historia de superación detrás de cada plato. Al final, lo que queda es la certeza de un sabor propio, una identidad que nació en tiempos difíciles para quedarse y que se sirve, con orgullo, libra por libra.
+        </p>
+    </section>
+
+</main>
+
+</body>
+</html>
