@@ -1,3 +1,6 @@
+/* =========================
+   BASE
+========================= */
 body{
     margin:0;
     font-family: Georgia, serif;
@@ -5,7 +8,9 @@ body{
     color:#111;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 .header{
     text-align:center;
     padding:20px;
@@ -31,13 +36,17 @@ body{
     margin-top:10px;
 }
 
-/* CONTENEDOR */
+/* =========================
+   CONTENEDOR
+========================= */
 .container{
     width:90%;
     margin:20px auto;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 .hero{
     display:grid;
     grid-template-columns: 1fr 1fr;
@@ -62,7 +71,9 @@ body{
     font-size:40px;
 }
 
-/* GRID 2 */
+/* =========================
+   GRID PRINCIPAL
+========================= */
 .grid2{
     display:grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -70,15 +81,33 @@ body{
     margin-top:20px;
 }
 
+/* =========================
+   TARJETAS (FIX IMPORTANTE)
+========================= */
 .card{
     background:white;
     padding:15px;
+
     display:flex;
     flex-direction:column;
-    justify-content:space-between;
-}
+
+    height:100%; /* 🔥 clave */
 }
 
+/* TEXTO */
+.card p{
+    margin-bottom:10px;
+    line-height:1.5;
+}
+
+/* IMÁGENES BAJAN AUTOMÁTICAMENTE */
+.card img{
+    margin-top:auto;
+}
+
+/* =========================
+   VARIANTES
+========================= */
 .vertical{
     display:flex;
     flex-direction:column;
@@ -88,31 +117,38 @@ body{
     text-align:left;
 }
 
-/* IMÁGENES */
+/* =========================
+   IMÁGENES
+========================= */
 .img{
     background:#ccc;
 }
 
+/* MÁS PROTAGONISMO */
 .small{
-    height:120px;
+    height:140px;
 }
 
 .grande{
-    height:200px;
+    height:220px;
 }
 
 .horizontal{
     height:150px;
 }
 
-/* ICON */
+/* =========================
+   ICON
+========================= */
 .icon{
     height:80px;
     background:#ddd;
     margin-top:10px;
 }
 
-/* BOTTOM */
+/* =========================
+   BOTTOM
+========================= */
 .bottom{
     display:grid;
     grid-template-columns: 2fr 1fr;
@@ -125,14 +161,18 @@ body{
     padding:15px;
 }
 
-/* IMÁGENES COMO LAS DEL LOGO */
+/* =========================
+   IMÁGENES GENERALES
+========================= */
 .hero-img, .img, .icon{
     width:100%;
     object-fit:cover;
     display:block;
 }
 
-/* BOTÓN LEER MÁS */
+/* =========================
+   BOTÓN
+========================= */
 .leer-mas{
     display:inline-block;
     margin-top:10px;
