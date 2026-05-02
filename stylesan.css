@@ -1,5 +1,5 @@
 /* =========================
-   RESET + BASE
+   BASE
 ========================= */
 body{
     margin:0;
@@ -37,38 +37,37 @@ img{
 }
 
 /* =========================
-   CONTENEDOR (más centrado)
+   CONTENEDOR
 ========================= */
 .nota{
-    width:80%; /* 🔥 más compacto */
+    width:80%;
     margin:40px auto;
-    position:relative;
 }
 
 /* =========================
-   ENCABEZADO
+   ENCABEZADO (FIX REAL)
 ========================= */
 .encabezado{
-    position:relative;
-    padding-right:45%;
+    display:grid;
+    grid-template-columns: 1.1fr 1fr; /* 🔥 texto vs imagen */
+    gap:40px;
+    align-items:start;
 }
 
-/* 🔥 FIX alineación izquierda */
-.encabezado h1,
-.bajada,
-.autor{
-    margin-left:0;
+/* BLOQUE TEXTO */
+.encabezado-texto{
+    display:flex;
+    flex-direction:column;
 }
 
 /* TITULO */
 .encabezado h1{
     font-family: 'Playfair Display', serif;
-    font-size:64px;
+    font-size:52px; /* 🔽 más equilibrado */
     line-height:1.05;
-    max-width:620px;
     color:#b11212;
-
-    letter-spacing:-0.5px; /* 👈 más elegante */
+    letter-spacing:-0.5px;
+    margin:0 0 15px 0;
 }
 
 /* BAJADA */
@@ -76,64 +75,45 @@ img{
     font-size:17px;
     max-width:520px;
     color:#444;
-   text-align: justify;
+    text-align:justify;
 }
 
 /* AUTOR */
 .autor{
     font-size:14px;
     color:#777;
+    margin-top:10px;
 }
 
 /* =========================
-   IMAGEN SUPERIOR
+   IMAGEN SUPERIOR (ALINEADA)
 ========================= */
-.final{
-    position:absolute;
-    top:0;
-    right:140px; /* 🔥 alineada con columna derecha */
-    width:36%;
-
-    height:260px;
+.encabezado img{
+    height:100%; /* 🔥 igual altura que texto */
+    max-height:340px;
     object-fit:cover;
+    border-radius:8px;
 
-    filter:brightness(0.85);
-
-    /* difuminado editorial */
-    mask-image: linear-gradient(to left, black 65%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to left, black 65%, transparent 100%);
-
-    border-radius:6px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
 /* =========================
-   GRID PRINCIPAL (más centrado)
+   GRID PRINCIPAL
 ========================= */
 .grid{
     display:grid;
     grid-template-columns: 1fr 1.3fr 1fr;
-    gap:50px; /* 🔥 más aire elegante */
-    margin-top:40px;
+    gap:50px;
+    margin-top:50px;
 }
 
-/* =========================
-   COLUMNAS
-========================= */
+/* COLUMNAS */
 .col{
     display:flex;
     flex-direction:column;
 }
 
-/* =========================
-   TEXTO IZQUIERDO (alineado)
-========================= */
-.grid .col:first-child{
-    margin-left:0; /* 🔥 FIX real */
-}
-
-/* =========================
-   TEXTO GENERAL
-========================= */
+/* TEXTO */
 .texto{
     max-width:440px;
     font-size:17px;
@@ -145,9 +125,7 @@ p{
     margin-bottom:14px;
 }
 
-/* =========================
-   DERECHA MÁS COMPACTA
-========================= */
+/* DERECHA MÁS COMPACTA */
 .grid .col:last-child p{
     line-height:1.5;
 }
@@ -158,24 +136,19 @@ p{
 }
 
 /* =========================
-   IMAGEN CENTRAL
+   IMÁGENES
 ========================= */
 .grande{
-    max-height:900px;
-    object-fit:cover;
-
     width:95%;
     margin:30px auto 0 auto;
+    max-height:900px;
 
-    /* 🔥 mejora estética */
-    box-shadow:0 15px 40px rgba(0,0,0,0.2);
+    object-fit:cover;
     border-radius:8px;
-    transform:scale(1.02); /* 👈 leve protagonismo */
+
+    box-shadow:0 15px 40px rgba(0,0,0,0.2);
 }
 
-/* =========================
-   IMAGEN DERECHA
-========================= */
 .pequena{
     width:85%;
     height:420px;
@@ -183,12 +156,12 @@ p{
 
     margin-top:10px;
 
-    box-shadow:0 10px 25px rgba(0,0,0,0.18);
     border-radius:8px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.18);
 }
 
 /* =========================
-   CITA (MEJORADA)
+   CITA
 ========================= */
 .cita{
     font-size:18px;
@@ -199,7 +172,6 @@ p{
     padding-left:14px;
 
     margin:20px 0;
-
     font-style:italic;
 }
 
@@ -210,8 +182,6 @@ h2{
     font-family: 'Playfair Display', serif;
     font-size:22px;
     color:#b11212;
-
-    letter-spacing:0.5px;
 }
 
 /* =========================
@@ -229,10 +199,7 @@ h2{
 }
 
 /* =========================
-   BOTÓN VOLVER (EDITORIAL)
-========================= */
-/* =========================
-   BOTÓN MODERNO
+   BOTÓN
 ========================= */
 .btn-home{
     display:inline-block;
@@ -248,12 +215,9 @@ h2{
     border:1px solid rgba(0,0,0,0.2);
     border-radius:20px;
 
-    font-family: 'Libre Baskerville', serif;
-
     transition:all 0.25s ease;
 }
 
-/* hover moderno */
 .btn-home:hover{
     background:#b11212;
     color:#fff;
@@ -263,10 +227,13 @@ h2{
     box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
 
+/* =========================
+   LEYENDA
+========================= */
 .caption{
     font-size:13px;
     color:#666;
     margin-top:8px;
-    text-align: justify;
+    text-align:justify;
     font-style:italic;
 }
