@@ -73,6 +73,10 @@ body{
 .card{
     background:white;
     padding:15px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
 }
 
 .vertical{
