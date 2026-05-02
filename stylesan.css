@@ -76,6 +76,7 @@ img{
     font-size:17px;
     max-width:520px;
     color:#444;
+   text-align: justify;
 }
 
 /* AUTOR */
@@ -260,4 +261,12 @@ h2{
 
     transform:translateY(-2px);
     box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+.caption{
+    font-size:13px;
+    color:#666;
+    margin-top:8px;
+    text-align: justify;
+    font-style:italic;
 }
