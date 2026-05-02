@@ -230,25 +230,34 @@ h2{
 /* =========================
    BOTÓN VOLVER (EDITORIAL)
 ========================= */
+/* =========================
+   BOTÓN MODERNO
+========================= */
 .btn-home{
-    position:absolute;
-    top:10px;   
-    left:0;
+    display:inline-block;
+    margin-bottom:30px;
 
+    padding:8px 16px;
     font-size:14px;
     text-decoration:none;
+
     color:#111;
+    background:#fff;
 
-    border-bottom:1px solid #111;
-    padding-bottom:2px;
+    border:1px solid rgba(0,0,0,0.2);
+    border-radius:20px;
 
-    letter-spacing:0.5px;
+    font-family: 'Libre Baskerville', serif;
 
     transition:all 0.25s ease;
-    z-index:10; 
 }
 
+/* hover moderno */
 .btn-home:hover{
-    color:#b11212;
+    background:#b11212;
+    color:#fff;
     border-color:#b11212;
+
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
