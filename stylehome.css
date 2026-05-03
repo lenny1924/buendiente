@@ -357,3 +357,35 @@ a{
     opacity:1;
     visibility:visible;
 }
+
+/* NAV BAR */
+.nav-bar{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:12px 0;
+    background:white;
+    border-bottom:1px solid #ddd;
+}
+
+.nav-bar a{
+    font-size:14px;
+    font-weight:bold;
+    color:#111;
+    position:relative;
+}
+
+.nav-bar a::after{
+    content:"";
+    position:absolute;
+    bottom:-4px;
+    left:0;
+    width:0;
+    height:2px;
+    background:#b80000;
+    transition:0.3s;
+}
+
+.nav-bar a:hover::after{
+    width:100%;
+}
