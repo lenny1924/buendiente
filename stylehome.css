@@ -14,7 +14,7 @@ a{
 }
 
 /* =========================
-   HEADER (TIPO BBC)
+   HEADER
 ========================= */
 .header{
     position:relative;
@@ -39,7 +39,7 @@ a{
 }
 
 /* =========================
-   MENU PROFESIONAL
+   MENU
 ========================= */
 .menu-btn{
     position:fixed;
@@ -57,6 +57,13 @@ a{
     z-index:3000;
 
     box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+/* 🔥 OCULTAR BOTÓN CUANDO MENU ABRE */
+.menu-btn.hide{
+    opacity:0;
+    pointer-events:none;
 }
 
 .sidebar{
@@ -69,7 +76,7 @@ a{
     color:white;
     padding:30px 20px;
     transition:0.35s ease;
-    z-index:1000;
+    z-index:2000;
     box-shadow:5px 0 25px rgba(0,0,0,0.3);
 }
 
@@ -95,9 +102,7 @@ a{
 
 .sidebar a{
     color:white;
-    text-decoration:none;
     font-size:15px;
-    transition:0.2s;
 }
 
 .sidebar a:hover{
@@ -115,7 +120,7 @@ a{
     opacity:0;
     visibility:hidden;
     transition:0.3s;
-    z-index:900;
+    z-index:1500;
 }
 
 .overlay.active{
@@ -137,7 +142,7 @@ a{
 .hero{
     display:grid;
     grid-template-columns:2fr 1fr;
-    gap:25px;
+    gap:30px;
     background:white;
     padding:20px;
 }
@@ -146,10 +151,6 @@ a{
     width:100%;
     height:380px;
     object-fit:cover;
-}
-
-.hero-text h2{
-    margin:0;
 }
 
 .hero-text .big{
@@ -163,56 +164,49 @@ a{
 }
 
 /* =========================
-   GRID PRINCIPAL
+   GRID
 ========================= */
 .grid2{
     display:grid;
     grid-template-columns:1fr 1.5fr 1fr;
-    gap:35px;
-    margin-top:30px;
+    gap:40px;
+    margin-top:40px;
 }
 
 /* =========================
-   TARJETAS
+   TARJETAS (UNIFICADAS)
 ========================= */
-.card{
+.card,
+.bottom-left,
+.bottom-right{
     background:white;
     padding:15px;
     border-top:3px solid #b80000;
     display:flex;
     flex-direction:column;
+    height:100%;
 }
 
-/* 🔥 IGUALAMOS LAS DEL BOTTOM */
-.bottom-left, .bottom-right{
-    background:white;
-    padding:15px;
-    border-top:3px solid #b80000;
-    display:flex;
-    flex-direction:column;
-}
-
-/* 🔥 MISMO COMPORTAMIENTO QUE CARD */
+/* 🔥 TIPOGRAFÍA IGUAL */
+.card h3,
 .bottom-left h3,
 .bottom-right h3{
     margin:10px 0;
     font-size:16px;
 }
 
+.card p,
 .bottom-left p,
 .bottom-right p{
     font-size:14px;
     color:#333;
 }
 
-.card h3{
-    margin:10px 0;
-    font-size:16px;
-}
-
-.card p{
-    font-size:14px;
-    color:#333;
+/* 🔥 BOTÓN AL FINAL SIEMPRE */
+.card .leer-mas,
+.bottom-left .leer,
+.bottom-right .leer-mas{
+    margin-top:auto;
 }
 
 /* =========================
@@ -232,20 +226,18 @@ a{
 }
 
 .horizontal{
-    height:140px; /* 🔥 igualamos altura visual */
+    height:140px;
 }
 
 .icon{
     height:80px;
-    margin-top:auto;
-    object-fit:cover;
+    margin-top:10px;
 }
 
 /* =========================
    BOTONES
 ========================= */
 .leer-mas{
-    margin-top:10px;
     font-weight:bold;
     font-size:13px;
     color:#b80000;
@@ -256,13 +248,13 @@ a{
 }
 
 /* =========================
-   BLOQUE INFERIOR
+   BLOQUE INFERIOR (AHORA ES GRID DE CARDS)
 ========================= */
 .bottom{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:35px; /* 🔥 más separación */
-    margin-top:35px;
+    gap:40px;
+    margin-top:40px;
 }
 
 /* =========================
@@ -272,8 +264,8 @@ a{
 .bottom-left:hover,
 .bottom-right:hover,
 .hero:hover{
-    transform:translateY(-2px);
-    transition:.2s;
+    transform:translateY(-3px);
+    transition:.25s;
 }
 
 /* =========================
@@ -295,7 +287,7 @@ a{
 }
 
 /* =========================
-   NAV BAR
+   NAV
 ========================= */
 .nav-bar{
     display:flex;
