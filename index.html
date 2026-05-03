@@ -6,8 +6,28 @@
 <link rel="stylesheet" href="stylehome.css">
 </head>
 
+<script>
+function toggleMenu(){
+    document.getElementById("sidebar").classList.toggle("active");
+}
+</script>
+    
 <body>
+    
+<!-- BOTÓN -->
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
 
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+    <h2>Notas</h2>
+    <ul>
+        <li><a href="sanroqueindex.html">San Roque</a></li>
+        <li><a href="DONindex.html">Don Shalo</a></li>
+        <li><a href="libraindex.html">Libra x Libra</a></li>
+        <li><a href="chamindex.html">Champús</a></li>
+    </ul>
+</aside>
+    
 <header class="header">
 
     <div class="topline"></div>
