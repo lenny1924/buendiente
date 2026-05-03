@@ -25,21 +25,7 @@
 <!-- OVERLAY -->
 <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
 
-<!-- TODO TU CONTENIDO (header, main, etc.) -->
-
-<!-- SCRIPT (AL FINAL) -->
-<script>
-function toggleMenu(){
-    const sidebar = document.getElementById("sidebar");
-    const overlay = document.getElementById("overlay");
-
-    sidebar.classList.toggle("active");
-    overlay.classList.toggle("active");
-}
-</script>
-
-</body>
-    
+<!-- HEADER -->
 <header class="header">
 
     <div class="topline"></div>
@@ -51,6 +37,14 @@ function toggleMenu(){
     <p class="sub">SEMANARIO DE GASTRONOMÍA LAMBAYECANA</p>
 
     <div class="divider"></div>
+
+    <nav class="nav-bar">
+        <a href="index.html">Inicio</a>
+        <a href="sanroqueindex.html">San Roque</a>
+        <a href="DONindex.html">Don Shalo</a>
+        <a href="libraindex.html">Libra x Libra</a>
+        <a href="chamindex.html">Champús</a>
+    </nav>
 
 </header>
 
@@ -176,6 +170,17 @@ function toggleMenu(){
     </section>
 
 </main>
+
+<!-- SCRIPT (AL FINAL) -->
+<script>
+function toggleMenu(){
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("overlay");
+
+    sidebar.classList.toggle("active");
+    overlay.classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
