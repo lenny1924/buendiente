@@ -60,12 +60,7 @@ a{
     transition:0.3s;
 }
 
-/* 🔥 OCULTAR BOTÓN CUANDO MENU ABRE */
-.menu-btn.hide{
-    opacity:0;
-    pointer-events:none;
-}
-
+/* SIDEBAR */
 .sidebar{
     position:fixed;
     top:0;
@@ -169,25 +164,28 @@ a{
 .grid2{
     display:grid;
     grid-template-columns:1fr 1.5fr 1fr;
-    gap:40px;
-    margin-top:40px;
+    gap:60px; /* 🔥 MÁS SEPARACIÓN */
+    margin-top:50px;
 }
 
 /* =========================
-   TARJETAS (UNIFICADAS)
+   TARJETAS (TODAS IGUALES)
 ========================= */
 .card,
 .bottom-left,
 .bottom-right{
     background:white;
-    padding:15px;
+    padding:18px;
     border-top:3px solid #b80000;
+
     display:flex;
     flex-direction:column;
-    height:100%;
+    justify-content:space-between;
+
+    min-height:240px; /* 🔥 IGUALAMOS ALTURA */
 }
 
-/* 🔥 TIPOGRAFÍA IGUAL */
+/* TITULOS */
 .card h3,
 .bottom-left h3,
 .bottom-right h3{
@@ -195,18 +193,22 @@ a{
     font-size:16px;
 }
 
+/* TEXTO */
 .card p,
 .bottom-left p,
 .bottom-right p{
     font-size:14px;
     color:#333;
+    line-height:1.5;
+
+    flex-grow:1; /* 🔥 RELLENA ESPACIO SI NO HAY IMAGEN */
 }
 
-/* 🔥 BOTÓN AL FINAL SIEMPRE */
+/* BOTONES */
 .card .leer-mas,
 .bottom-left .leer,
 .bottom-right .leer-mas{
-    margin-top:auto;
+    margin-top:15px;
 }
 
 /* =========================
@@ -248,13 +250,13 @@ a{
 }
 
 /* =========================
-   BLOQUE INFERIOR (AHORA ES GRID DE CARDS)
+   BLOQUE INFERIOR
 ========================= */
 .bottom{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:40px;
-    margin-top:40px;
+    gap:60px; /* 🔥 MISMA SEPARACIÓN */
+    margin-top:50px;
 }
 
 /* =========================
