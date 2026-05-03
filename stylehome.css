@@ -186,3 +186,78 @@ body{
     text-decoration:underline;
     opacity:0.7;
 }
+
+/* ===== SIDEBAR ===== */
+.menu-btn{
+    position:fixed;
+    top:20px;
+    left:20px;
+    font-size:24px;
+    cursor:pointer;
+    z-index:1000;
+    background:white;
+    padding:5px 10px;
+    border:1px solid #ccc;
+}
+
+.sidebar{
+    position:fixed;
+    top:0;
+    left:-260px;
+    width:260px;
+    height:100%;
+    background:#111;
+    color:white;
+    padding:20px;
+    transition:0.3s;
+    z-index:999;
+}
+
+.sidebar.active{
+    left:0;
+}
+
+.sidebar ul{
+    list-style:none;
+    padding:0;
+}
+
+.sidebar li{
+    margin:15px 0;
+}
+
+.sidebar a{
+    color:white;
+    text-decoration:none;
+}
+
+/* ===== ORDEN VISUAL SIN ROMPER ===== */
+
+/* mejora contenedor */
+.container{
+    max-width:1200px;
+}
+
+/* evita que todo se vea aplastado */
+.hero{
+    gap:20px;
+}
+
+/* mejora imágenes */
+.hero-img{
+    object-fit:cover;
+}
+
+.img{
+    object-fit:cover;
+}
+
+/* mejora tarjetas */
+.card{
+    border-top:2px solid #000;
+}
+
+/* textos más limpios */
+p{
+    color:#333;
+}
