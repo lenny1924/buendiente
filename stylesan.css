@@ -45,16 +45,16 @@ img{
 }
 
 /* =========================
-   ENCABEZADO (FIX REAL)
+   ENCABEZADO (AJUSTADO)
 ========================= */
 .encabezado{
     display:grid;
-    grid-template-columns: 1.1fr 1fr; /* 🔥 texto vs imagen */
+    grid-template-columns: 1.2fr 0.8fr;
     gap:40px;
     align-items:start;
 }
 
-/* BLOQUE TEXTO */
+/* TEXTO */
 .encabezado-texto{
     display:flex;
     flex-direction:column;
@@ -63,11 +63,12 @@ img{
 /* TITULO */
 .encabezado h1{
     font-family: 'Playfair Display', serif;
-    font-size:52px; /* 🔽 más equilibrado */
+    font-size:52px;
     line-height:1.05;
     color:#b11212;
     letter-spacing:-0.5px;
-    margin:0 0 15px 0;
+    margin:0;
+    order:1;
 }
 
 /* BAJADA */
@@ -76,6 +77,8 @@ img{
     max-width:520px;
     color:#444;
     text-align:justify;
+    margin-top:12px;
+    order:2;
 }
 
 /* AUTOR */
@@ -83,18 +86,28 @@ img{
     font-size:14px;
     color:#777;
     margin-top:10px;
+    order:3;
 }
 
 /* =========================
-   IMAGEN SUPERIOR (ALINEADA)
+   IMAGEN LATERAL (AJUSTADA)
 ========================= */
 .encabezado img{
-    height:100%; /* 🔥 igual altura que texto */
-    max-height:340px;
+    width:100%;
+    height:220px;
     object-fit:cover;
-    border-radius:8px;
 
+    border-radius:8px;
     box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* LEYENDA */
+.caption{
+    font-size:13px;
+    color:#666;
+    margin-top:8px;
+    text-align:justify;
+    font-style:italic;
 }
 
 /* =========================
@@ -225,15 +238,4 @@ h2{
 
     transform:translateY(-2px);
     box-shadow:0 8px 20px rgba(0,0,0,0.15);
-}
-
-/* =========================
-   LEYENDA
-========================= */
-.caption{
-    font-size:13px;
-    color:#666;
-    margin-top:8px;
-    text-align:justify;
-    font-style:italic;
 }
