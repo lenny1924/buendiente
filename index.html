@@ -8,6 +8,22 @@
 
 <body>
 
+<!-- BOTÓN MENU -->
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+    <h2>Notas</h2>
+    <ul>
+        <li><a href="sanroqueindex.html">San Roque</a></li>
+        <li><a href="DONindex.html">Don Shalo</a></li>
+        <li><a href="libraindex.html">Libra x Libra</a></li>
+        <li><a href="chamindex.html">Champús</a></li>
+        <li><a href="lasindex.html">Las de Siempre</a></li>
+        <li><a href="canindex.html">El Cántaro</a></li>
+    </ul>
+</aside>
+
 <header class="header">
 
     <div class="topline"></div>
@@ -24,10 +40,9 @@
 
 <main class="container">
 
-    <!-- BLOQUE PRINCIPAL -->
+    <!-- HERO (NOTICIA PRINCIPAL) -->
     <section class="hero">
         
-        <!-- IMAGEN CON LINK -->
         <a href="nota1.html">
             <img src="sanroquehome.avif" class="hero-img" alt="San Roque">
         </a>
@@ -51,10 +66,10 @@
     </section>
 
 
-    <!-- SEGUNDO BLOQUE -->
+    <!-- GRID PRINCIPAL -->
     <section class="grid2">
 
-        <!-- DON SHALO -->
+        <!-- IZQUIERDA -->
         <article class="card vertical">
             <h3>DON SHALO</h3>
 
@@ -70,7 +85,7 @@
             <a href="DONindex.html" class="leer-mas">Leer más</a>
         </article>
 
-        <!-- LIBRA -->
+        <!-- CENTRO (DESTACADO) -->
         <article class="card grande">
             
             <a href="nota3.html">
@@ -87,14 +102,14 @@
             <a href="libraindex.html" class="leer-mas">Leer más</a>
         </article>
 
-        <!-- INFO -->
+        <!-- DERECHA -->
         <article class="card vertical">
             <h3>CHAMPÚS Y CACHANGA</h3>
 
             <p>
-            En Chiclayo, los emprendimientos gastronómicos mantienen viva la tradición
-            desde lo cotidiano. El champús con cachangas, preparado a partir de recetas familiares,
-            no solo representa un sabor típico del norte, sino también una historia de constancia, identidad y crecimiento.
+                En Chiclayo, los emprendimientos gastronómicos mantienen viva la tradición
+                desde lo cotidiano. El champús con cachangas, preparado a partir de recetas familiares,
+                no solo representa un sabor típico del norte, sino también una historia de constancia, identidad y crecimiento.
             </p>
 
             <a href="chamindex.html" class="leer-mas">Leer más</a>
@@ -117,33 +132,37 @@
             <h3>LAS DE SIEMPRE</h3>
 
             <p>
-            Desde un carrito en el Paseo Las Musas hasta convertirse en un punto de encuentro en la ciudad,
-            Las de Siempre Burger forma parte de la memoria colectiva de Chiclayo. Más que hamburguesas,
-            representa constancia, cercanía y una historia que sigue vigente con el paso del tiempo.
+                Desde un carrito en el Paseo Las Musas hasta convertirse en un punto de encuentro en la ciudad,
+                Las de Siempre Burger forma parte de la memoria colectiva de Chiclayo. 
+                Más que hamburguesas, representa constancia, cercanía y una historia que sigue vigente.
             </p>
 
-            <a href="lasindex.html" class="leer">Leer más</a>
+            <a href="lasindex.html" class="leer-mas">Leer más</a>
         </div>
 
         <div class="bottom-right">
             <h3>EL CÁNTARO CAFÉ</h3>
 
             <p>
-            En Lambayeque, los desayunos tradicionales siguen siendo parte esencial de la identidad local.
-            En El Cántaro Café, sabores como la humita y el pan con chicharrón mantienen viva la cocina casera,
-            ofreciendo una experiencia que conecta historia, costumbre y sabor.
+                En Lambayeque, los desayunos tradicionales siguen siendo parte esencial de la identidad local.
+                En El Cántaro Café, sabores como la humita y el pan con chicharrón mantienen viva la cocina casera.
             </p>
 
-             <a href="canindex.html" class="leer-mas">Leer más</a>
+            <a href="canindex.html" class="leer-mas">Leer más</a>
             
             <img src="CAN3.jpeg" class="icon" alt="icono">
-
-            
         </div>
 
     </section>
 
 </main>
+
+<!-- SCRIPT -->
+<script>
+function toggleMenu(){
+    document.getElementById("sidebar").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
