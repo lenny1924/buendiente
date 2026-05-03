@@ -45,19 +45,19 @@ a{
     position:fixed;
     top:20px;
     left:20px;
-
     font-size:26px;
-    color:#000;
     background:white;
-
     padding:6px 10px;
     border-radius:5px;
-
     cursor:pointer;
     z-index:3000;
-
     box-shadow:0 4px 10px rgba(0,0,0,0.15);
     transition:0.3s;
+}
+
+.menu-btn.hide{
+    opacity:0;
+    pointer-events:none;
 }
 
 /* SIDEBAR */
@@ -77,31 +77,6 @@ a{
 
 .sidebar.active{
     left:0;
-}
-
-.sidebar h2{
-    font-size:18px;
-    margin-bottom:20px;
-    border-bottom:1px solid rgba(255,255,255,0.2);
-    padding-bottom:10px;
-}
-
-.sidebar ul{
-    list-style:none;
-    padding:0;
-}
-
-.sidebar li{
-    margin:18px 0;
-}
-
-.sidebar a{
-    color:white;
-    font-size:15px;
-}
-
-.sidebar a:hover{
-    opacity:0.6;
 }
 
 /* OVERLAY */
@@ -148,67 +123,80 @@ a{
     object-fit:cover;
 }
 
-.hero-text .big{
-    font-size:34px;
-    font-weight:bold;
-}
-
-.hero-text p{
-    color:#444;
-    line-height:1.6;
-}
-
 /* =========================
    GRID
 ========================= */
 .grid2{
     display:grid;
     grid-template-columns:1fr 1.5fr 1fr;
-    gap:60px; /* 🔥 MÁS SEPARACIÓN */
+    gap:60px;
     margin-top:50px;
 }
 
 /* =========================
-   TARJETAS (TODAS IGUALES)
+   TARJETAS
 ========================= */
 .card,
 .bottom-left,
 .bottom-right{
     background:white;
-    padding:18px;
+    padding:16px;
     border-top:3px solid #b80000;
 
     display:flex;
     flex-direction:column;
-    justify-content:space-between;
+    justify-content:flex-start;
 
-    min-height:240px; /* 🔥 IGUALAMOS ALTURA */
+    min-height:auto; /* 🔥 ya no fuerza tamaño */
+}
+
+/* 🔥 CARDS SIN IMAGEN MÁS CHICAS */
+.card:not(:has(img)){
+    padding:14px;
+    max-width:260px;
 }
 
 /* TITULOS */
 .card h3,
 .bottom-left h3,
 .bottom-right h3{
-    margin:10px 0;
-    font-size:16px;
+    margin:8px 0;
+    font-size:15px;
 }
 
 /* TEXTO */
 .card p,
 .bottom-left p,
 .bottom-right p{
-    font-size:14px;
+    font-size:13px;
     color:#333;
-    line-height:1.5;
-
-    flex-grow:1; /* 🔥 RELLENA ESPACIO SI NO HAY IMAGEN */
+    line-height:1.4;
 }
 
 /* BOTONES */
 .card .leer-mas,
 .bottom-left .leer,
 .bottom-right .leer-mas{
-    margin-top:15px;
+    margin-top:10px;
+}
+
+/* =========================
+   LIBRA CENTRO (SUBIR CONTENIDO)
+========================= */
+.card.grande{
+    justify-content:flex-start;
+}
+
+.card.grande h3{
+    margin-top:6px;
+}
+
+.card.grande p{
+    margin-top:6px;
+}
+
+.card.grande .leer-mas{
+    margin-top:8px;
 }
 
 /* =========================
@@ -231,11 +219,6 @@ a{
     height:140px;
 }
 
-.icon{
-    height:80px;
-    margin-top:10px;
-}
-
 /* =========================
    BOTONES
 ========================= */
@@ -245,17 +228,13 @@ a{
     color:#b80000;
 }
 
-.leer-mas:hover{
-    text-decoration:underline;
-}
-
 /* =========================
    BLOQUE INFERIOR
 ========================= */
 .bottom{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:60px; /* 🔥 MISMA SEPARACIÓN */
+    gap:60px;
     margin-top:50px;
 }
 
@@ -298,22 +277,4 @@ a{
     padding:12px 0;
     background:white;
     border-bottom:1px solid #ddd;
-}
-
-.nav-bar a{
-    font-size:14px;
-    font-weight:bold;
-    color:#111;
-    position:relative;
-}
-
-.nav-bar a::after{
-    content:"";
-    position:absolute;
-    bottom:-4px;
-    left:0;
-    width:0;
-    height:2px;
-    background:#b80000;
-    transition:0.3s;
 }
