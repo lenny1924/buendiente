@@ -6,14 +6,8 @@
 <link rel="stylesheet" href="stylehome.css">
 </head>
 
-<script>
-function toggleMenu(){
-    document.getElementById("sidebar").classList.toggle("active");
-}
-</script>
-    
 <body>
-    
+
 <!-- BOTÓN -->
 <div class="menu-btn" onclick="toggleMenu()">☰</div>
 
@@ -27,6 +21,26 @@ function toggleMenu(){
         <li><a href="chamindex.html">Champús</a></li>
     </ul>
 </aside>
+
+<!-- OVERLAY -->
+<div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+
+<!-- TODO TU CONTENIDO AQUÍ -->
+
+
+<!-- SCRIPT (AL FINAL) -->
+<script>
+function toggleMenu(){
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("overlay");
+
+    sidebar.classList.toggle("active");
+    overlay.classList.toggle("active");
+}
+</script>
+
+</body>
     
 <header class="header">
 
