@@ -1,239 +1,155 @@
-/* =========================
-   BASE
-========================= */
+/* RESET */
 body{
     margin:0;
-    font-family: 'Libre Baskerville', serif;
-    background:#f4f1ea;
+    font-family: Georgia, serif;
+    background:#f2f2f2;
     color:#111;
 }
 
-img{
-    width:100%;
-    display:block;
+/* BOTÓN */
+.menu-btn{
+    position:fixed;
+    top:15px;
+    left:15px;
+    font-size:24px;
+    cursor:pointer;
+    z-index:1000;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* SIDEBAR */
+.sidebar{
+    position:fixed;
+    left:-260px;
+    top:0;
+    width:260px;
+    height:100%;
+    background:#111;
+    color:white;
+    padding:20px;
+    transition:.3s;
+}
+
+.sidebar.active{
+    left:0;
+}
+
+.sidebar ul{
+    list-style:none;
+    padding:0;
+}
+
+.sidebar li{
+    margin:15px 0;
+}
+
+.sidebar a{
+    color:white;
+}
+
+/* HEADER */
 .header{
     text-align:center;
     padding:20px;
-}
-
-.topline{
-    border-top:2px solid black;
-    margin-bottom:10px;
-}
-
-.logo-container img{
-    width:220px;
-    margin:auto;
-}
-
-.divider{
+    background:white;
     border-bottom:2px solid black;
-    margin-top:10px;
 }
 
-/* =========================
-   CONTENEDOR
-========================= */
-.nota{
-    width:80%;
-    margin:40px auto;
+/* CONTENEDOR */
+.container{
+    width:90%;
+    margin:20px auto;
 }
 
-/* =========================
-   ENCABEZADO (FIX REAL)
-========================= */
-.encabezado{
+/* HERO */
+.hero{
     display:grid;
-    grid-template-columns: 1.1fr 1fr; /* 🔥 texto vs imagen */
-    gap:40px;
-    align-items:start;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+    background:white;
+    padding:20px;
 }
 
-/* BLOQUE TEXTO */
-.encabezado-texto{
-    display:flex;
-    flex-direction:column;
+.hero img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
 }
 
-/* TITULO */
-.encabezado h1{
-    font-family: 'Playfair Display', serif;
-    font-size:52px; /* 🔽 más equilibrado */
-    line-height:1.05;
-    color:#b11212;
-    letter-spacing:-0.5px;
-    margin:0 0 15px 0;
+.hero-text h1{
+    font-size:36px;
+    margin:0;
 }
 
-/* BAJADA */
-.bajada{
-    font-size:17px;
-    max-width:520px;
+.hero-text p{
     color:#444;
-    text-align:justify;
 }
 
-/* AUTOR */
-.autor{
-    font-size:14px;
-    color:#777;
-    margin-top:10px;
-}
-
-/* =========================
-   IMAGEN SUPERIOR (ALINEADA)
-========================= */
-.encabezado img{
-    height:100%; /* 🔥 igual altura que texto */
-    max-height:340px;
-    object-fit:cover;
-    border-radius:8px;
-
-    box-shadow:0 10px 30px rgba(0,0,0,0.15);
-}
-
-/* =========================
-   GRID PRINCIPAL
-========================= */
-.grid{
+/* GRID */
+.news-grid{
     display:grid;
-    grid-template-columns: 1fr 1.3fr 1fr;
-    gap:50px;
-    margin-top:50px;
+    grid-template-columns:1fr 2fr 1fr;
+    gap:20px;
+    margin-top:20px;
 }
 
-/* COLUMNAS */
-.col{
-    display:flex;
-    flex-direction:column;
+.card{
+    background:white;
+    padding:15px;
 }
 
-/* TEXTO */
-.texto{
-    max-width:440px;
-    font-size:17px;
-    line-height:1.75;
-    text-align:justify;
-}
-
-p{
-    margin-bottom:14px;
-}
-
-/* DERECHA MÁS COMPACTA */
-.grid .col:last-child p{
-    line-height:1.5;
-}
-
-.grid .col:last-child h2{
-    margin-top:12px;
-    margin-bottom:6px;
-}
-
-/* =========================
-   IMÁGENES
-========================= */
-.grande{
-    width:95%;
-    margin:30px auto 0 auto;
-    max-height:900px;
-
+.card img{
+    width:100%;
+    height:150px;
     object-fit:cover;
-    border-radius:8px;
-
-    box-shadow:0 15px 40px rgba(0,0,0,0.2);
 }
 
-.pequena{
-    width:85%;
-    height:420px;
-    object-fit:cover;
+.card.big img{
+    height:220px;
+}
 
+.card.text img{
+    height:100px;
     margin-top:10px;
-
-    border-radius:8px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.18);
 }
 
-/* =========================
-   CITA
-========================= */
-.cita{
-    font-size:18px;
-    font-weight:bold;
-    color:#b11212;
-
-    border-left:5px solid #b11212;
-    padding-left:14px;
-
-    margin:20px 0;
-    font-style:italic;
+h3{
+    margin:10px 0;
 }
 
-/* =========================
-   SUBTITULOS
-========================= */
-h2{
-    font-family: 'Playfair Display', serif;
-    font-size:22px;
-    color:#b11212;
+/* BOTTOM */
+.bottom{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+    margin-top:20px;
 }
 
-/* =========================
-   PIE
-========================= */
-.pie{
-    text-align:center;
-    margin-top:60px;
+.bottom-left, .bottom-right{
+    background:white;
+    padding:15px;
 }
 
-.pie p{
-    font-style:italic;
-    font-size:15px;
-    color:#555;
+.bottom img{
+    width:100%;
+    height:150px;
+    object-fit:cover;
 }
 
-/* =========================
-   BOTÓN
-========================= */
-.btn-home{
-    display:inline-block;
-    margin-bottom:30px;
-
-    padding:8px 16px;
-    font-size:14px;
+/* LINKS */
+a{
     text-decoration:none;
-
-    color:#111;
-    background:#fff;
-
-    border:1px solid rgba(0,0,0,0.2);
-    border-radius:20px;
-
-    transition:all 0.25s ease;
+    font-weight:bold;
 }
 
-.btn-home:hover{
-    background:#b11212;
-    color:#fff;
-    border-color:#b11212;
-
-    transform:translateY(-2px);
-    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+a:hover{
+    text-decoration:underline;
 }
 
-/* =========================
-   LEYENDA
-========================= */
-.caption{
-    font-size:13px;
-    color:#666;
-    margin-top:8px;
-    text-align:justify;
-    font-style:italic;
+/* RESPONSIVE */
+@media(max-width:900px){
+    .hero,
+    .news-grid,
+    .bottom{
+        grid-template-columns:1fr;
+    }
 }
