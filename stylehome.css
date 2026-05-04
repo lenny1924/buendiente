@@ -122,27 +122,21 @@ a{
 }
 
 /* =========================
-   GRID INFERIOR (SOLO ESPACIADO)
+   GRID (SOLO ESPACIADO)
 ========================= */
 .grid2{
     display:grid;
     grid-template-columns:1fr 1.5fr 1fr;
 
+    /* 🔥 SOLO MÁS AIRE ENTRE COLUMNAS Y FILAS */
     column-gap:60px;
-    row-gap:60px;
+    row-gap:70px;
 
     margin-top:60px;
-
-    align-items:start;
-}
-
-/* 🔥 SOLO ESPACIADO ENTRE CARDS, SIN AFECTAR DISEÑO INTERNO */
-.grid2 > .card{
-    margin-bottom:25px;
 }
 
 /* =========================
-   TARJETAS (SIN CAMBIOS ESTRUCTURALES)
+   TARJETAS (SIN CAMBIOS)
 ========================= */
 .card,
 .bottom-left,
@@ -172,7 +166,7 @@ a{
     color:#333;
 }
 
-/* BOTÓN ABAJO */
+/* BOTÓN SIEMPRE ABAJO */
 .card .leer-mas,
 .bottom-left .leer,
 .bottom-right .leer-mas{
