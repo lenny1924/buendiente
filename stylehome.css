@@ -337,9 +337,19 @@ a{
     display:block;
 }
 
-.grid2 .card:nth-last-child(-n+3) img{
+}
+.grid2 .card:nth-last-child(-n+5) img{
     width:100%;
     height:160px;
     object-fit:cover;
     display:block;
 }
+
+}
+.grid2 .card:nth-last-child(-n+6) img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+    display:block;
+}
+
