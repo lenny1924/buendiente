@@ -347,3 +347,57 @@ a{
     border-bottom:1px solid #ddd;
     padding-bottom:5px;
 }
+
+/* =========================
+   MEGA MENU
+========================= */
+
+.nav-item{
+    position:relative;
+    display:inline-block;
+}
+
+/* PANEL OCULTO */
+.mega-menu{
+    position:absolute;
+    top:100%;
+    left:50%;
+    transform:translateX(-50%);
+
+    display:flex;
+    gap:60px;
+
+    background:white;
+    padding:25px 40px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,0.15);
+    border-top:3px solid #b80000;
+
+    opacity:0;
+    visibility:hidden;
+    transition:0.3s;
+    z-index:1000;
+}
+
+/* 🔥 HOVER = SE ABRE */
+.nav-item:hover .mega-menu{
+    opacity:1;
+    visibility:visible;
+}
+
+/* COLUMNAS */
+.mega-col{
+    display:flex;
+    flex-direction:column;
+}
+
+/* LINKS */
+.mega-col a{
+    font-size:14px;
+    margin:6px 0;
+    color:#111;
+}
+
+.mega-col a:hover{
+    color:#b80000;
+}
