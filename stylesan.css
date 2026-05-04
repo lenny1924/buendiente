@@ -217,6 +217,8 @@ h2{
     border:1px solid rgba(0,0,0,0.3);
     border-radius:20px;
 
+    text-decoration:none; 
+
     transition:all 0.25s ease;
     z-index:10;
 }
