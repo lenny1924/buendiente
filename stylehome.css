@@ -315,3 +315,11 @@ a{
     background:#b80000;
     transition:0.3s;
 }
+
+.grid2{
+    row-gap:70px;
+}
+
+.card{
+    margin-bottom:25px;
+}
