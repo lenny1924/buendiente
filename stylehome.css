@@ -330,3 +330,9 @@ a{
     object-fit:cover;
     display:block;
 }
+
+.card p,
+.bottom-left p,
+.bottom-right p{
+    text-align: justify;
+}
