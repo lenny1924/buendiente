@@ -60,6 +60,7 @@ a{
     transition:0.3s;
 }
 
+/* 🔥 OCULTAR BOTÓN CUANDO MENU ABRE */
 .menu-btn.hide{
     opacity:0;
     pointer-events:none;
@@ -81,6 +82,31 @@ a{
 
 .sidebar.active{
     left:0;
+}
+
+.sidebar h2{
+    font-size:18px;
+    margin-bottom:20px;
+    border-bottom:1px solid rgba(255,255,255,0.2);
+    padding-bottom:10px;
+}
+
+.sidebar ul{
+    list-style:none;
+    padding:0;
+}
+
+.sidebar li{
+    margin:18px 0;
+}
+
+.sidebar a{
+    color:white;
+    font-size:15px;
+}
+
+.sidebar a:hover{
+    opacity:0.6;
 }
 
 /* OVERLAY */
@@ -111,7 +137,7 @@ a{
 }
 
 /* =========================
-   HERO (NO TOCAR)
+   HERO
 ========================= */
 .hero{
     display:grid;
@@ -121,22 +147,34 @@ a{
     padding:20px;
 }
 
+.hero-img{
+    width:100%;
+    height:380px;
+    object-fit:cover;
+}
+
+.hero-text .big{
+    font-size:34px;
+    font-weight:bold;
+}
+
+.hero-text p{
+    color:#444;
+    line-height:1.6;
+}
+
 /* =========================
-   GRID (SOLO ESPACIADO)
+   GRID
 ========================= */
 .grid2{
     display:grid;
     grid-template-columns:1fr 1.5fr 1fr;
-
-    /* 🔥 SOLO MÁS AIRE ENTRE COLUMNAS Y FILAS */
-    column-gap:60px;
-    row-gap:70px;
-
-    margin-top:60px;
+    gap:40px;
+    margin-top:40px;
 }
 
 /* =========================
-   TARJETAS (SIN CAMBIOS)
+   TARJETAS (UNIFICADAS)
 ========================= */
 .card,
 .bottom-left,
@@ -149,9 +187,7 @@ a{
     height:100%;
 }
 
-/* =========================
-   TEXTO
-========================= */
+/* 🔥 TIPOGRAFÍA IGUAL */
 .card h3,
 .bottom-left h3,
 .bottom-right h3{
@@ -166,7 +202,7 @@ a{
     color:#333;
 }
 
-/* BOTÓN SIEMPRE ABAJO */
+/* 🔥 BOTÓN AL FINAL SIEMPRE */
 .card .leer-mas,
 .bottom-left .leer,
 .bottom-right .leer-mas{
@@ -181,10 +217,22 @@ a{
     object-fit:cover;
 }
 
-.small{ height:140px; }
-.grande{ height:240px; }
-.horizontal{ height:140px; }
-.icon{ height:80px; margin-top:10px; }
+.small{
+    height:140px;
+}
+
+.grande{
+    height:240px;
+}
+
+.horizontal{
+    height:140px;
+}
+
+.icon{
+    height:80px;
+    margin-top:10px;
+}
 
 /* =========================
    BOTONES
@@ -200,13 +248,13 @@ a{
 }
 
 /* =========================
-   BLOQUE INFERIOR
+   BLOQUE INFERIOR (AHORA ES GRID DE CARDS)
 ========================= */
 .bottom{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:60px;
-    margin-top:60px;
+    gap:40px;
+    margin-top:40px;
 }
 
 /* =========================
@@ -231,13 +279,10 @@ a{
 
     .grid2{
         grid-template-columns:1fr;
-        row-gap:40px;
-        column-gap:0;
     }
 
     .bottom{
         grid-template-columns:1fr;
-        gap:40px;
     }
 }
 
