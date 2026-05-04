@@ -336,3 +336,14 @@ a{
 .bottom-right p{
     text-align: justify;
 }
+
+/* TITULOS DE COLUMNAS */
+.mega-col h4{
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:10px;
+    color:#b80000;
+    border-bottom:1px solid #ddd;
+    padding-bottom:5px;
+}
