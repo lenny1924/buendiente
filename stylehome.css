@@ -111,7 +111,7 @@ a{
 }
 
 /* =========================
-   HERO
+   HERO (NO TOCAR)
 ========================= */
 .hero{
     display:grid;
@@ -122,16 +122,13 @@ a{
 }
 
 /* =========================
-   GRID
+   GRID INFERIOR (SOLO ESPACIADO)
 ========================= */
 .grid2{
     display:grid;
     grid-template-columns:1fr 1.5fr 1fr;
 
-    /* 🔥 MÁS ESPACIO ENTRE COLUMNAS */
     column-gap:60px;
-
-    /* 🔥 MÁS ESPACIO ENTRE FILAS */
     row-gap:60px;
 
     margin-top:60px;
@@ -139,13 +136,13 @@ a{
     align-items:start;
 }
 
-/* 🔥 ESPACIADO EXTRA ENTRE CARDS INTERNAS */
-.grid2 .card{
-    margin-bottom:30px;
+/* 🔥 SOLO ESPACIADO ENTRE CARDS, SIN AFECTAR DISEÑO INTERNO */
+.grid2 > .card{
+    margin-bottom:25px;
 }
 
 /* =========================
-   TARJETAS
+   TARJETAS (SIN CAMBIOS ESTRUCTURALES)
 ========================= */
 .card,
 .bottom-left,
@@ -175,7 +172,7 @@ a{
     color:#333;
 }
 
-/* BOTÓN SIEMPRE ABAJO */
+/* BOTÓN ABAJO */
 .card .leer-mas,
 .bottom-left .leer,
 .bottom-right .leer-mas{
@@ -214,10 +211,7 @@ a{
 .bottom{
     display:grid;
     grid-template-columns:1fr 1fr;
-
-    /* 🔥 MÁS SEPARACIÓN ABAJO */
     gap:60px;
-
     margin-top:60px;
 }
 
@@ -243,8 +237,6 @@ a{
 
     .grid2{
         grid-template-columns:1fr;
-
-        /* 🔥 MENOS ESPACIO EN MOBILE PERO CONSISTENTE */
         row-gap:40px;
         column-gap:0;
     }
