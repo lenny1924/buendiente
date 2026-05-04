@@ -171,6 +171,24 @@ a{
     grid-template-columns:1fr 1.5fr 1fr;
     gap:40px;
     margin-top:40px;
+
+    align-items:start;
+}
+
+/* 🔥 ESPACIADO ENTRE CARDS */
+.grid2 .card{
+    margin-bottom:20px;
+}
+
+/* 🔥 MEJOR DISTRIBUCIÓN VISUAL */
+.grid2 .card{
+    display:flex;
+    justify-content:space-between;
+}
+
+/* 🔥 ALTURA MÍNIMA PARA CONSISTENCIA */
+.card.vertical{
+    min-height:320px;
 }
 
 /* =========================
@@ -248,7 +266,7 @@ a{
 }
 
 /* =========================
-   BLOQUE INFERIOR (AHORA ES GRID DE CARDS)
+   BLOQUE INFERIOR
 ========================= */
 .bottom{
     display:grid;
